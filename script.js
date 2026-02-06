@@ -3,6 +3,11 @@ const navToggle = document.querySelector(".nav-toggle");
 const navMenu = document.querySelector(".main-nav");
 const revealItems = document.querySelectorAll("[data-reveal]");
 const slider = document.querySelector("[data-slider]");
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+document.querySelectorAll("[data-year]").forEach((node) => {
+  node.textContent = String(new Date().getFullYear());
+});
 
 if (navToggle && navMenu) {
   navToggle.addEventListener("click", () => {
@@ -26,19 +31,23 @@ const setHeaderState = () => {
 setHeaderState();
 window.addEventListener("scroll", setHeaderState);
 
-const revealOnView = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("revealed");
-        revealOnView.unobserve(entry.target);
-      }
-    });
-  },
-  { threshold: 0.25 }
-);
+if (reduceMotion) {
+  revealItems.forEach((item) => item.classList.add("revealed"));
+} else {
+  const revealOnView = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("revealed");
+          revealOnView.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.16, rootMargin: "0px 0px -8% 0px" }
+  );
 
-revealItems.forEach((item) => revealOnView.observe(item));
+  revealItems.forEach((item) => revealOnView.observe(item));
+}
 
 if (slider) {
   const slides = Array.from(slider.querySelectorAll("[data-slide]"));
