@@ -72,10 +72,12 @@
       <section class="hero container">
         <div class="hero-content" data-reveal>
           <p class="eyebrow">Собственное производство и прямые поставки</p>
-          <h1>Камень, который повышает статус объекта и продает его дороже</h1>
+          <p class="hero-slogan">Пришел. Увидел. И купил.</p>
+          <h1>Натуральный камень, который сразу добавляет ценность вашему объекту</h1>
           <p class="hero-lead">
-            Подберем материал под задачу, бюджет и сроки. Работаем с фасадами,
-            интерьерами, лестницами, входными группами и благоустройством.
+            Помогаем выбрать материал вживую, быстро считаем смету и запускаем
+            поставку без срывов. Фасады, интерьеры, лестницы, входные группы и
+            благоустройство под ключ.
           </p>
 
           <div class="hero-actions">
@@ -91,11 +93,76 @@
         </div>
 
         <aside class="hero-visual" data-reveal>
-          <div class="visual-frame">
-            <p class="placeholder-title">Здесь будет ключевое фото проекта</p>
-            <p class="placeholder-note">
-              Добавим визуал карьера / готового объекта на следующем шаге.
-            </p>
+          <div class="project-slider" data-slider aria-label="Ключевые проекты из натурального камня">
+            <article class="slide is-active" data-slide>
+              <div class="slide-media">
+                <img
+                  src="./assets/projects/project-1.jpg"
+                  data-base="./assets/projects/project-1"
+                  data-ext-index="0"
+                  alt="Гранитная площадка и водный объект в частной резиденции"
+                  loading="eager"
+                />
+                <div class="slide-fallback">
+                  Добавьте изображение <code>project-1.jpg</code> в папку
+                  <code>assets/projects</code>
+                </div>
+              </div>
+              <div class="slide-caption">
+                <strong>Гранитная площадка с водным акцентом</strong>
+                <span>Точный подбор фактуры и геометрии под архитектуру объекта</span>
+              </div>
+            </article>
+
+            <article class="slide" data-slide>
+              <div class="slide-media">
+                <img
+                  src="./assets/projects/project-2.jpg"
+                  data-base="./assets/projects/project-2"
+                  data-ext-index="0"
+                  alt="Ландшафтная дорожка из натурального камня рядом с домом"
+                  loading="lazy"
+                />
+                <div class="slide-fallback">
+                  Добавьте изображение <code>project-2.jpg</code> в папку
+                  <code>assets/projects</code>
+                </div>
+              </div>
+              <div class="slide-caption">
+                <strong>Ландшафтная дорожка премиум-класса</strong>
+                <span>Износостойкое решение для частного благоустройства</span>
+              </div>
+            </article>
+
+            <article class="slide" data-slide>
+              <div class="slide-media">
+                <img
+                  src="./assets/projects/project-3.jpg"
+                  data-base="./assets/projects/project-3"
+                  data-ext-index="0"
+                  alt="Уличная кухня с каменной столешницей и зоной барбекю"
+                  loading="lazy"
+                />
+                <div class="slide-fallback">
+                  Добавьте изображение <code>project-3.jpg</code> в папку
+                  <code>assets/projects</code>
+                </div>
+              </div>
+              <div class="slide-caption">
+                <strong>Каменная летняя кухня и барбекю-зона</strong>
+                <span>Практичная поверхность и аккуратная посадка всех модулей</span>
+              </div>
+            </article>
+
+            <div class="slider-progress" aria-hidden="true">
+              <span class="slider-progress-fill"></span>
+            </div>
+
+            <div class="slider-dots" role="tablist" aria-label="Переключение проектов">
+              <button class="slider-dot is-active" type="button" data-dot="0" aria-label="Проект 1"></button>
+              <button class="slider-dot" type="button" data-dot="1" aria-label="Проект 2"></button>
+              <button class="slider-dot" type="button" data-dot="2" aria-label="Проект 3"></button>
+            </div>
           </div>
 
           <div class="visual-card card-a">
