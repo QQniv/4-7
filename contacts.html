@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Контакты | Четыре Седьмых</title>
-    <meta name="description" content="Контакты офиса и склада компании Четыре Седьмых." />
+    <meta name="description" content="Контакты офиса и склада компании Четыре Седьмых, телефоны и график работы." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -31,13 +31,14 @@
 
         <nav class="main-nav" id="main-nav">
           <a href="./index.html">Главная</a>
-          <a  href="./catalog.html">Каталог</a>
-          <a  href="./delivery.html">Оплата и доставка</a>
-          <a  href="./partners.html">Партнерам</a>
-          <a  href="./news.html">Новости</a>
-          <a  href="./articles.html">Статьи</a>
-          <a  href="./video.html">Видео</a>
-          <a  href="./about.html">О нас</a>
+          <a href="./catalog.html">Каталог</a>
+          <a href="./projects.html">Проекты</a>
+          <a href="./delivery.html">Оплата и доставка</a>
+          <a href="./partners.html">Партнерам</a>
+          <a href="./news.html">Новости</a>
+          <a href="./articles.html">Статьи</a>
+          <a href="./video.html">Видео</a>
+          <a href="./about.html">О нас</a>
           <a class="is-active" href="./contacts.html">Контакты</a>
         </nav>
 
@@ -48,23 +49,77 @@
     <main class="inner-page">
       <section class="container inner-hero" data-reveal>
         <p class="section-kicker">Контакты</p>
-        <h1>Свяжитесь с нами</h1>
-        <p>Офис и склад работают в будние дни. По заявкам на расчет отвечаем максимально быстро.</p>
+        <h1>Офис, склад и обратная связь</h1>
+        <p>
+          Контактные данные перенесены со старого сайта 4-7.ru. Для точного расчета
+          или консультации отправьте запрос через форму.
+        </p>
       </section>
 
-      <section class="inner-section" data-reveal>
-        <div class="container">
-          <div class="anchor-list">
-            <a href="#overview">Обзор</a><a href="#details">Детали</a><a href="#contacts">Контакты</a>
-          </div>
-          <div class="inner-grid">
-            <article class="inner-card">
-              <h3>Офис</h3>
-              <p>Москва, ул. Маршала Вершинина, д. 8, корп. 2. Тел.: +7 (495) 989-76-77.</p>
+      <section class="page-section" data-reveal>
+        <div class="container page-grid">
+          <aside class="page-nav">
+            <h3>Навигация</h3>
+            <a href="#office">Офис</a>
+            <a href="#warehouse">Склад</a>
+            <a href="#phones">Телефоны</a>
+            <a href="#request">Форма заявки</a>
+          </aside>
+
+          <div class="page-content">
+            <article class="panel" id="office">
+              <p class="section-kicker">Локация 01</p>
+              <h2>Офис компании</h2>
+              <p>г. Москва, ул. Маршала Вершинина, д. 8, корп. 2 (м. Октябрьское поле)</p>
+              <ul class="panel-list">
+                <li>График: Пн-Пт, с 09:30 до 18:00</li>
+                <li>Сб-Вс: выходной</li>
+                <li>Email: <a href="mailto:info@4-7.ru">info@4-7.ru</a></li>
+              </ul>
             </article>
-            <article class="inner-card">
-              <h3>Склад</h3>
-              <p>МО, Одинцовский район, пос. ВНИИССОК. Email: info@4-7.ru.</p>
+
+            <article class="panel" id="warehouse">
+              <p class="section-kicker">Локация 02</p>
+              <h2>Склад</h2>
+              <p>
+                Московская область, Одинцовский район, пос. ВНИИССОК, ул. Транзитная,
+                стройбаза «Шанс».
+              </p>
+              <ul class="panel-list">
+                <li>Самовывоз по предварительному согласованию</li>
+                <li>Помощь с подбором и проверкой партий перед отгрузкой</li>
+              </ul>
+            </article>
+
+            <article class="panel" id="phones">
+              <p class="section-kicker">Связь</p>
+              <h2>Телефоны отделов</h2>
+              <div class="two-col">
+                <ul class="panel-list">
+                  <li><a href="tel:+74959897677">(495) 989-76-77</a></li>
+                  <li><a href="tel:+74991948313">(499) 194-83-13</a></li>
+                  <li><a href="tel:+74991943092">(499) 194-30-92</a></li>
+                </ul>
+                <ul class="panel-list">
+                  <li><a href="tel:+79162922323">+7 (916) 292-23-23</a></li>
+                  <li><a href="tel:+79164580963">+7 (916) 458-09-63</a></li>
+                  <li><a href="tel:+79035999973">+7 (903) 599-99-73</a></li>
+                </ul>
+              </div>
+            </article>
+
+            <article class="cta-band" id="request">
+              <h3>Оставьте запрос, и менеджер свяжется с вами</h3>
+              <p>
+                Укажите задачу, площадь или тип материала. Подготовим понятный ответ с
+                вариантами под ваш бюджет.
+              </p>
+              <form class="form-grid" action="#" method="post">
+                <input type="text" name="name" placeholder="Ваше имя" required />
+                <input type="tel" name="phone" placeholder="Телефон" required />
+                <textarea name="comment" rows="4" placeholder="Комментарий"></textarea>
+                <button class="btn btn-solid" type="submit">Отправить запрос</button>
+              </form>
             </article>
           </div>
         </div>
